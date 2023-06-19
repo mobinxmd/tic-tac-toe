@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <title>Tic Tac Toe</title>
+</head>
+<style>
+    #mainBox{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .active{
+        margin: 5px;
+    }
+</style>
+<body>
+    <div class="w-screen h-screen bg-teal-800 flex justify-center items-center flex-col  overflow-hidden gap-1" >
+        <div id="divPlayer" class="w-4/12 bg-green-500 h-20 rounded-lg flex font-bold text-white text-lg">
+            <div id="player1"  class="bg-sky-700 w-full hover:bg-sky-800 items-center flex justify-center rounded-s-lg">
+                Player 1
+            </div>
+            <div id="player2"  class="bg-sky-700 w-full hover:bg-sky-800 items-center flex justify-center rounded-e-lg">
+                Player 2
+            </div>
+        </div>
+        <div id="mainBox" class="bg-white w-4/12 h-80 rounded shadow-lg  gap-1 rounded-lg p-1">
+           <div id="0" class="box bg-gray-900 hover:bg-gray-800 rounded-tl-lg flex justify-center items-center">
+                <img class="hidden x" src="images/x-10366.png" alt="">
+                <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="1" class="box bg-gray-900 hover:bg-gray-800 flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="2" class="box bg-gray-900 hover:bg-gray-800 rounded-te-lg flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="3" class="box bg-gray-900 hover:bg-gray-800 flex justify-center items-center" >
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="4" class="box bg-gray-900 hover:bg-gray-800 flex justify-center items-center" >
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="5" class="box bg-gray-900 hover:bg-gray-800 flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="6" class="box bg-gray-900 hover:bg-gray-800 rounded-bl-lg flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="7" class="box bg-gray-900 hover:bg-gray-800 flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+           <div id="8" class="box bg-gray-900 hover:bg-gray-800 rounded-br-lg flex justify-center items-center">
+            <img class="hidden x" src="images/x-10366.png" alt="">
+            <img class="hidden o w-16 h-16" src="images/O png.png" alt="">
+           </div>
+        </div>
+
+
+
+
+       <!---  Winning Log   -->
+        <div id="resultLog" class="h-screen w-screen z-1 absolute flex justify-center items-center bg-black/80 hidden ">
+            <div 
+            class="w-4/12 h-64 bg-violet-700 text-white relative font-bold flex flex-col justify-center items-center transition ease-in-out delay-700 rounded-lg">
+            <h1 id="textLog" class="text-3xl animate-bounce"></h1>
+            <button id="restart" class="absolute bottom-2 p-3 w-2/4 bg-white text-black hover:bg-gray-300 rounded">Play Again!</button>
+       </div>
+        </div>
+    </div>
+</body>
+<script src="custom.js"></script>
+</html>
